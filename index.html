@@ -1,1 +1,191 @@
-
+<html> 
+    <head> 
+        <meta charset="UTF-8"/> 
+        <meta name="view port" content="width=device-width,initial-scale=1.0"/> 
+        <title>NLH 🎓</title> 
+        <link rel="icon" href="images.jpg"> 
+        <link rel="stylesheet" href="sheet.css"> 
+    </head> 
+    <body> 
+        <script> 
+        const c = document.querySelector("canvas"); 
+const ctx = c.getContext("2d"); 
+let cw = (c.width = window.innerWidth); 
+let ch = (c.height = window.innerHeight); 
+let radius = Math.max(cw,ch); 
+const particles = Array(99); 
+for (let i = 0; i < particles.length; i++) { 
+  particles[i] = { 
+    x: 0, 
+    y: 0, 
+    scale: 0,  
+    rotate: 0, 
+    img: new Image() 
+  }   
+  particles[i].img.src = "https://assets.codepen.io/16327/flair-"+(2+i%21)+".png"; 
+} 
+const tl = gsap.timeline({onUpdate:draw}) 
+ 
+ 7 
+  .fromTo(particles, { 
+    x:(i)=> { 
+      const angle = (i/particles.length * Math.PI *2)- Math.PI/2 
+      return Math.cos(angle*10) * radius 
+    }, 
+    y:(i)=> { 
+     const angle = (i/particles.length * Math.PI *2)- Math.PI/2 
+      return Math.sin(angle*10) * radius 
+        }, 
+    scale: 1.1,   rotate: 0 
+  },{ 
+    duration: 5, 
+    ease: "sine", 
+    x: 0, 
+    y: 0, 
+    scale: 0, 
+    rotate: -3, 
+    stagger:{each:-0.05, repeat:-1} 
+  }, 0) 
+  .seek(99) 
+function draw(){   
+  particles.sort( (a,b) => a.scale - b.scale )   
+  ctx.clearRect(0, 0, cw, ch); 
+  particles.forEach((p, i) => { 
+    ctx.translate(cw / 2, ch / 2); 
+    ctx.rotate( p.rotate ); 
+    ctx.drawImage( 
+      p.img, 
+      p.x, 
+      p.y, 
+ 
+      p.img.width * p.scale, 
+      p.img.height * p.scale 
+    ); 
+    ctx.resetTransform(); 
+  }); 
+} 
+window.addEventListener("resize", () => { 
+  cw = c.width = innerWidth; 
+  ch = c.height = innerHeight; 
+  radius = Math.max(cw,ch); 
+  tl.invalidate(); 
+}); 
+c.addEventListener('pointerup', ()=>{  
+  gsap.to(tl, {  
+    timeScale: tl.isActive() ? 0 : 1  
+  }) 
+}) 
+</script>    
+         <center> 
+            <div class="A"> 
+                <div class="scrollable-content">           
+            <h1 class="B">NextGen Learning Hub🎓</h1> 
+            <p><b>Free courses | Online courses | Offline courses | Certified courses</b></p> 
+            <p>Empowering young developers to level up their skills through training in software 
+development technologies 🧑💻</p> 
+            <div class="nav"> 
+                <nav>                    
+                    <ul mar class="ul"> 
+                        <li class="li"><a href="" class="link">Home </a>|</li> 
+                        <li class="li"><a href="products.html" class="link">Products </a>|</li> 
+ 
+ 7 
+                        <li class="li"><a href="#Aboutus" class="link">About Us </a>|</li> 
+                        <li class="li"><a href="#contact"  id="contact">Contacts Us</a>|</li> 
+                        <li class="li"><a href="login.html"> login</a>|</li> 
+                        <li class="li"><a href="register.html">Register</a></li> 
+                    </ul> 
+                </nav> 
+            </div> 
+            <video autoplay controls loop muted class="video1"  style="pointer-events: none;"> 
+                <source src="web tech animation.mp4" type="video/mp4" class="video1"> 
+            </video> 
+            </div>     
+        <div> 
+        <h3>🌟 Welcome to NextGen Learning Hub🎓 – Your Gateway to Growth! 🌟 
+            Take charge of your future with our industry-leading courses: 🎓 Certified Online & Offline 
+Programs for learners at every stage. 📚 Expert-led sessions designed to sharpen your skills and 
+unlock opportunities. 💡 Flexible schedules and affordable pricing to fit your lifestyle.        
+            Why wait? Join the next generation of achievers today!         
+            🚀 Register Now and pave your way to success!</h3>     
+        </div> 
+   </center> 
+        <hr>  
+        <div> 
+            <h3>List of courses and duration</h3> 
+            <list> 
+                <ol> 
+                   <li>online courses</li> 
+                   <ul> 
+                    <li>Python</li> 
+                    <li>C-programming</li> 
+                    <li>C++ </li> 
+ 
+                    <li>HTML</li> 
+                    <li>CSS</li> 
+                   </ul> 
+                   <li>Offline courses</li> 
+                   <ul> 
+                    <li>Python</li> 
+                    <li>C-programming</li> 
+                    <li>C++ </li> 
+                    <li>HTML</li> 
+                    <li>CSS</li> 
+                    <li>javascript</li> 
+                    <li>java</li> 
+                    <li>node js</li> 
+                    <li>react js</li> 
+                   </ul> 
+                </ol> 
+            </list> 
+        </div> 
+        <hr>  
+        <div id="Aboutus" style="margin: 20px;"> 
+          <center><h2> About Us</h2></center> 
+          <p> 
+            Welcome to NextGen Learning Hub – where passion meets progress in the ever-evolving 
+world of technology! 
+            At NLH Academy, we believe that learning should be accessible, engaging, and empowering. 
+Whether you're an aspiring developer, a seasoned professional looking to upskill, or simply someone 
+eager to explore the vast world of software development, we are here to guide you on your journey. 
+            What We Offer 
+            We provide a dynamic learning experience through a variety of online and offline courses, 
+meticulously crafted by industry experts. Our certified programs ensure learners gain practical skills 
+that translate into real-world success. 
+ 
+ 7 
+            Courses range from foundational programming languages like Python, C, C++, HTML, CSS to 
+more advanced technologies like JavaScript, Java, Node.js, React.js, and more! 
+            Our Mission 
+            Our mission is simple: to create a community of innovative, future-ready developers through 
+structured, high-quality training. We aim to bridge the gap between education and industry by 
+providing the right tools, mentorship, and hands-on projects. 
+            Why Choose NextGen Learning Hub?<br> 
+            ✅ Certified Training – Industry-recognized courses tailored for modern-day 
+professionals.<br> 
+            ✅ Expert Instructors – Learn from the best in the field and gain mentorship from experienced 
+tech leaders.<br> 
+            ✅ Flexible Learning Paths – Whether you prefer online convenience or offline interaction, we 
+cater to all needs.<br> 
+            ✅ Career Advancement – Our practical, skill-based approach helps learners land jobs and 
+excel in their tech careers.<br> 
+            Join us today and be part of the next generation of trailblazing tech minds. Your journey to 
+excellence starts NOW! 🚀<br>   
+            This prompt captures the vision, mission, and offerings of NextGen Learning Hub 🎓 in an 
+engaging way. Let me know if you'd like to fine-tune any details! 😊 
+          </p> 
+        </div> 
+        <center> 
+          <div> 
+              <button><a href="login.html" class="button">Click here to login</a></button> 
+          </div> 
+          <hr> 
+          <div> 
+              <a href="#contact">nlhacademy@nlh.ac.in | </a> 
+              <a href="#contact">044-894064156231</a> 
+          </div> 
+          </center> 
+          <hr> 
+ 
+    </body> 
+</html> 
