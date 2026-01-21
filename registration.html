@@ -1,0 +1,114 @@
+<html> 
+    <head> 
+        <title>Register page</title> 
+        <link rel="icon" href="img-1.jpeg.png"> 
+        <style>           
+        body{ 
+            background: radial-gradient(ellipse at left, #3cb175 10%,#20359e 70%,#0ac3ba 10%); 
+        } 
+        h2{ 
+            text-align: center; 
+        } 
+        p{ 
+            text-align: center; 
+        } 
+        form{ 
+            text-align: center; 
+            line-height: 4px; 
+        } 
+        form:hover{ 
+            cursor: pointer; 
+        } 
+        a:visited { 
+      color: rgb(249, 9, 9); 
+        } 
+        input{ 
+            margin: 10px; 
+        } 
+        .b{ 
+            text-align: justify; 
+            padding-left: 42%; 
+        } 
+        .b:hover{ 
+            cursor: pointer; 
+        } 
+        button{ 
+            margin-top:10px; 
+            margin-right: 60; 
+        } 
+        select{ 
+            padding-right:50px ; 
+        } 
+        .register{ 
+          font-size: 22px; 
+            padding: 30px; 
+        } 
+    </style> 
+        </style> 
+    </head> 
+    <body> 
+        <div class="register" margin="50px"> 
+        <h2>Registration Form</h2> 
+        <p>Fill in this form to register</p> 
+        <form> 
+            <label ><b>First Name:</b></label> 
+            <input type="text" placeholder="Enter your first name"><br> 
+            <label ><b>Last Name:</b></label> 
+            <input type="text" placeholder="Enter your last name"><br> 
+ 
+            <label ><b>E-mail:</b></label> 
+            <input type="email" placeholder="Enter your e-mail"><br> 
+            <label ><b>Date of Birth:</b></label> 
+            <input type="date"><br> 
+            <label><b>Set Username:</b></label> 
+            <input type="text" placeholder="Set Username"><br> 
+            <label><b>Set Password:</b></label> 
+            <input type="password" placeholder="Set Password"><br> 
+            <label ><b>Gender</b></label><br> 
+            <div class="b"> 
+            <input type="radio" name="a"> 
+            <label>Male</label><br> 
+            <input type="radio" name="a"> 
+            <label>Female</label><br> 
+            <input type="radio" name="a"> 
+            <label>other</label><br></div><br> 
+            <label><b>Course:</b></label> 
+            <select> 
+                <option>c/c++</option> 
+                <option >Python</option> 
+                <option >Web technology</option> 
+                <option>Open AI</option> 
+                <option>Excel</option> 
+              </select><br> 
+              <button type="submit">register</button> 
+        </form> 
+        </div> 
+        <script> 
+            function validateForm() { 
+                let firstName = document.forms["regForm"]["firstName"].value; 
+ 
+ 7 
+                let lastName = document.forms["regForm"]["lastName"].value; 
+                let email = document.forms["regForm"]["email"].value; 
+                let dob = document.forms["regForm"]["dob"].value; 
+                let username = document.forms["regForm"]["username"].value; 
+                let password = document.forms["regForm"]["password"].value;    
+                if (firstName == "" || lastName == "" || email == "" || dob == "" || username == "" || password 
+== "") { 
+                    alert("All fields must be filled out!"); 
+                    return false; 
+                } 
+                let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+            if (!email.match(emailPattern)) { 
+                alert("Enter a valid email address!"); 
+                return false; 
+            } 
+            if (password.length < 6) { 
+                alert("Password must be at least 6 characters long!"); 
+                return false; 
+            } 
+            return true; 
+        } 
+    </script>   
+    </body> 
+</html>
