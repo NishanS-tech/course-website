@@ -1,0 +1,132 @@
+body { 
+    color: whitesmoke; 
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); 
+    background-size: cover; 
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+    height: 100vh; 
+    margin: 20px; 
+} 
+
+.nav { 
+    background: radial-gradient(circle, #777, #444); 
+    padding: 20px; 
+} 
+
+.button { 
+    color: blue; 
+} 
+
+.button:hover { 
+    color: red; 
+    transition: 0.1s; 
+    cursor: pointer; 
+} 
+
+.ul { 
+    color: aliceblue; 
+    display: inline; 
+    margin-left: 60%; 
+} 
+
+.li { 
+    color: whitesmoke; 
+    display: inline; 
+    padding: 10px; 
+    cursor: pointer; 
+} 
+
+.li:hover { 
+    color: aqua; 
+} 
+
+.login { 
+    color: #a0a7ad; 
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); 
+    border-radius: 25px; 
+    box-shadow: 10px 10px 20px lightgray, -10px -10px 20px rgb(253, 253, 253); 
+    align-items: center; 
+    display: flex; 
+    justify-content: center;
+} 
+
+.login-inset { 
+    background: lightgray; 
+    border-radius: 40px; 
+    box-shadow: 10px 10px 20px rgb(255, 255, 255), -10px -10px 20px rgb(255, 255, 255); 
+} 
+
+.login-box { 
+    color: #969ea8; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 30px; 
+    width: 300px; 
+    height: auto; 
+    text-align: center; 
+} 
+
+.l_h1 { 
+    margin-bottom: 25px; 
+} 
+
+.login-input { 
+    padding: 20px; 
+    width: 80%; 
+    font-size: 18px; 
+    color: #969ea8; 
+    margin-bottom: 30px; 
+} 
+
+.login-input::placeholder { 
+    color: #969ea8;   
+} 
+
+.forget { 
+    text-align: right; 
+} 
+
+.login-button { 
+    background-color: #a3b1c5; 
+    padding: 10px; 
+    font-size: 16px; 
+    color: #969ea8; 
+    cursor: pointer; 
+    transition: all 0.5s ease; 
+} 
+
+.login-button:active { 
+    box-shadow: inset 5px 5px 10px #a3b1c5, inset -5px -5px 10px #ffffff; 
+} 
+
+a { 
+    color: rgb(202, 231, 241); 
+} 
+
+a:hover { 
+    color: red; 
+    transition: 0.1s; 
+    cursor: pointer; 
+} 
+
+.scrollable-content { 
+    overflow-y: auto; 
+    max-height: 100vh; 
+} 
+
+html, body { 
+    margin: 0; 
+    padding: 0; 
+} 
+
+main { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    height: 100vh; 
+    background: rgb(14, 16, 15); 
+}
