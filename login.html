@@ -1,0 +1,40 @@
+<html> 
+    <head> 
+        <title>login to NLH</title> 
+        <link rel="icon" href="img-1.jpeg.png"> 
+        <link rel="stylesheet" href="sheet.css"> 
+        <style> 
+            body{ 
+             background: radial-gradient(parabola at left, #3cb175 10%,#20359e 70%,#18c7de 10%); 
+             margin-top: 30px; 
+            } 
+        </style> 
+    </head> 
+    <body > 
+        <div align="center"> 
+        <form class="login login-box"> 
+            <h1 class="l_h1">Login</h1> 
+            <input type="text" class="login login-input" placeholder="username" > 
+            <input type="password" class="login login-input" placeholder="password"> 
+            <a href="forgetpassword.html" class="forget">Forgot password ?</a><br> 
+            <button class="login login-button">Sign in</button><br> 
+            <a href="register.html">register here</a> 
+        </form> 
+        </div> 
+        <script> 
+            function validateLogin() { 
+                let username = document.getElementById("username").value; 
+                let password = document.getElementById("password").value; 
+                if (username === "" || password === "") { 
+                    alert("Please fill out both fields!"); 
+                    return false; 
+                } 
+                return true; 
+            } 
+            function togglePassword() { 
+                let passField = document.getElementById("password"); 
+                passField.type = (passField.type === "password") ? "text" : "password"; 
+            } 
+        </script> 
+    </body> 
+</html> 
